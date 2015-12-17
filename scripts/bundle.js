@@ -8,12 +8,13 @@ $button.on('click', loading);
 function loading(e) {
 	$button.html('loading...');
 	$button.css('color', 'grey');
-}
-setTimeOut(changeText, 4000);
 
-function changeText() {
-	$button.html('submit');
-	$button.css('color', 'green');
+	setTimeout(changeText, 4000);
+
+	function changeText(e) {
+		$button.html('click');
+		$button.css('color', 'green');
+	}
 }
 
 },{}]},{},[1])
